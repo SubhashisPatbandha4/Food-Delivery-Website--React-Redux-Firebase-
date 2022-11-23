@@ -8,8 +8,8 @@ import { VscAccount } from "react-icons/vsc"
 import { MdOutlineFavoriteBorder } from "react-icons/md"
 import { MdOutlineSummarize } from "react-icons/md"
 import { FiSettings } from "react-icons/fi"
-import Banner from "./components/banner/Banner"
-import BannerPic from "./Assets/banner.jpg"
+import MainContainer from "./components/mainContainer/MainContainer"
+import DishContainer from "./components/dishContainer/DishContainer"
 
 const App = () => {
   useEffect(() => {
@@ -34,19 +34,10 @@ const App = () => {
       
      main container 
   */}
+      <MainContainer />
 
-      <main>
-        <div className="mainContainer">
-          <div className="banner">
-            <Banner name="rahul" discount="20%" link='#' />
-            <img src={BannerPic} alt="delivery pic" />
+      <DishContainer />
 
-          </div>
-        </div>
-        <div className="rightMenu">
-
-        </div>
-      </main>
       {/*
       
       bottom menu

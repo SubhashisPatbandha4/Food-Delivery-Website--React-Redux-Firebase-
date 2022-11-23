@@ -1,0 +1,70 @@
+.mainContainer {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  margin-top: 6rem;
+}
+.mainContainer span{
+ font-size: 1.2rem;
+ color: var(--colorBG);
+ font-weight: 600;
+}
+.mainContainer > div .link {
+  background: var(--colorWhite);
+  border: transparent;
+  border-radius: 5rem;
+
+  /* position: relative; */
+  top: 1rem;
+  padding: 10px;
+  transition: var(--transition);
+}
+.mainContainer > div .link:hover {
+  background: transparent;
+  border: 2px solid var(--colorBGVariant);
+  color: var(--colorBG);
+}
+
+.banner {
+  display: grid;
+  gap: 3rem;
+  color: var(--colorWhite);
+}
+.banner > div {
+  text-align: center;
+  width: 100%;
+}
+.bannerImg {
+  height: 20rem;
+
+  overflow: hidden;
+}
+.bannerImg img {
+  justify-content: center;
+
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* ========================================media queries for ( MEDIUM DEVICES ) ================================ */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--containerWidthMd);
+  }
+  .mainContainer {
+    margin-top: 10rem;
+  }
+  .bannerImg {
+    height: 30rem;
+  }
+}
+/* ========================================media queries for ( SMALL DEVICES ) ================================ */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--containerWidthSm);
+  }
+  .bannerImg {
+    height: 20rem;
+  }
+}
