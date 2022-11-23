@@ -1,8 +1,8 @@
 import React from 'react'
 import { BsArrowRightSquare } from "react-icons/bs"
-const MenuCard = ({ img, name }) => {
+const MenuCard = ({ img, name, isActive }) => {
     return (
-        <div className='rowMenuCard'>
+        <div className={`rowMenuCard ${isActive ? "active" : ""}`}>
             <div className="imgBox">
                 <img src={img} alt="dish" />
             </div>
@@ -12,7 +12,7 @@ const MenuCard = ({ img, name }) => {
             <i className="loadMenu">
                 < BsArrowRightSquare />
             </i>
-        </div>
+        </div >
     )
 }
 
