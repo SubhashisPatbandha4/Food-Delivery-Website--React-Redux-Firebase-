@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,900&family=Roboto:ital,wght@0,100;0,300;0,900;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --colorBG: rgb(233, 123, 13);
+  --colorBGVariant: rgb(209, 96, 3);
+  --colorWhite: wheat;
+  --colorBlack: rgba(149, 218, 29, 0.648);
+  --colorRed: rgb(209, 52, 4);
+  --transition: all 300ms ease;
+
+  --containerWidthLg: 75%;
+  --containerWidthMd: 86%;
+  --containerWidthSm: 90%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline-style: none;
+  border: none;
+}
+.App {
+  height: 100vh;
+  width: 100vw;
+  background: var(--colorBG);
+  overflow-x: hidden;
+  background-image: url(./Assets/dark-wood.png);
+}
+.App::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: "P oppins";
+}
+ul {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--colorBG);
+}
+img {
+  max-width: 100%;
+}
+main {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  /* background-color: var(--colorBG); */
+  /* border: 10px solid var(--colorBGVariant); */
+}
+.bottomMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--colorBGVariant);
+  background-image: url(./Assets/dark-wood.png);
+  border-radius: 10rem 10rem 0 0;
+  z-index: 101;
+}
+.bottomMenu ul {
+  display: flex;
+}
+.bottomMenu ul li {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  z-index: 1;
+  transition: var(--transition);
+  color: var(--colorWhite);
+}
+.bottomMenu ul li.active {
+  color: white;
+  transform: translateY(-1.4rem);
+  scale: 1.2rem;
+}
+.bottomMenu ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(3rem * 0));
+}
+.bottomMenu ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(3rem * 1));
+}
+.bottomMenu ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(3rem * 2));
+}
+.bottomMenu ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(3rem * 3));
+}
+.bottomMenu ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(3rem * 4));
+}
+.bottomMenu ul li:nth-child(6).active ~ .indicator {
+  transform: translateX(calc(3rem * 5));
+}
+
+.bottomMenu ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+}
+.bottomMenu ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 3.5rem;
+  /* background: red; */
+  text-align: center;
+  transition: 0.5s;
+  color: var(--colorWhite);
+  font-size: 1.5rem;
+  border-image: url(./Assets/dark-wood.png);
+}
+.indicator {
+  position: absolute;
+  height: 3.1rem;
+  width: 3.1rem;
+  background-color: var(--colorBG);
+  border-radius: 100vw;
+  top: -50%;
+  transition: 0.5s;
+  border: 0.4rem solid var(--colorBG);
+}
+
+/* ========================================media queries for ( MEDIUM DEVICES ) ================================ */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--containerWidthMd);
+  }
+}
+/* ========================================media queries for ( SMALL DEVICES ) ================================ */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--containerWidthSm);
+  }
+}
