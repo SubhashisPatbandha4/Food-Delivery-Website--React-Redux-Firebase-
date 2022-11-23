@@ -1,0 +1,62 @@
+    .rowContainer {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 10px 0;
+  width:100vw;
+  /* padding: 2rem 0; */
+}
+.rowContainer::-webkit-scrollbar {
+  display: none;
+}
+.rowMenuCard {
+  color: var(--colorBG);
+  min-height: 8rem;
+  min-width: 10rem;
+  width: 10rem;
+  height: 8rem;
+  background: var(--colorWhite);
+  border: transparent;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  transition: var(--transition);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.367) ;
+}
+.rowMenuCard:hover {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--colorBG);
+  color: var(--colorWhite);
+}
+.rowMenuCard .imgBox {
+  width:  50px;
+  height: 50px;
+  /* padding: 2px; */
+  display: flex;    
+  overflow: hidden;
+}
+.rowMenuCard .imgBox img{
+  
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.rowMenuCard h3 {
+    font-weight: bold;
+    font-size: 15px;
+    word-break: break-all;
+}
+.rowMenuCard .loadMenu {
+transition:var(--transition)
+}
+.rowMenuCard .loadMenu:hover {
+transform: scale(1.3);
+
+}

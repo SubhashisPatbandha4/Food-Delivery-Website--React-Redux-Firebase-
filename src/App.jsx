@@ -9,7 +9,7 @@ import { MdOutlineFavoriteBorder } from "react-icons/md"
 import { MdOutlineSummarize } from "react-icons/md"
 import { FiSettings } from "react-icons/fi"
 import MainContainer from "./components/mainContainer/MainContainer"
-import DishContainer from "./components/dishContainer/DishContainer"
+
 
 const App = () => {
   useEffect(() => {
@@ -36,7 +36,7 @@ const App = () => {
   */}
       <MainContainer />
 
-      <DishContainer />
+     
 
       {/*
       

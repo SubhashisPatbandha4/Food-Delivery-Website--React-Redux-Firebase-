@@ -1,6 +1,7 @@
 import React from 'react'
 import SubMenuContainer from '../subMenuContainer/subMenuContainer'
-import "./dishContainer.css"
+import RowContainer from '../rowContainer/RowContainer'
+import "./dishContainer.css"    
 const DishContainer = ({ name }) => {
     return (
         <div>
@@ -8,7 +9,9 @@ const DishContainer = ({ name }) => {
                 <div className="menuCard">
                     <SubMenuContainer name={name} />
                 </div>
-                <div className="rowContainer"></div>
+                <div className="rowContainer">
+                    <RowContainer />
+                </div>
                 <div className="disItemContainer"></div>
             </div>
         </div>
