@@ -6,14 +6,20 @@ import "./ItemCard.css"
 
 
 
-const ItemCard = ({ imgSrc, name, rating, price }) => {
+const ItemCard = ({ imgSrc, name, rating, price,itemId }) => {
+
+    const [ratingValue, setRatingValue] = useState(Math.floor(rating))
+    const handleRating = (value) => {
+        setRatingValue(value)
+    }
+
+
     const [isFavourite, setIsFavourite] = useState(false);
     return (
-        <div className='itemCard'>
+        <div className='itemCard' id={itemId}>
 
             <div className="imgBox">
-                <img src="https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fdrink6.png?alt=media&token=86c4ba2c-0db7-47f0-b8cf-fed24db6c1ae
-" alt="" />
+                <img src={imgSrc} alt="product" />
             </div>
             <div className="itemContent">
                 <div className={`isFavourite ${isFavourite ? "active" : ""}`} onClick={() => setIsFavourite(!isFavourite)}>
@@ -25,7 +31,7 @@ const ItemCard = ({ imgSrc, name, rating, price }) => {
                         {
                             //making an array to use MAP ()
                             Array.apply(null, { length: 5 }).map((e, i) => (
-                                <i key={i} className="rating">
+                                <i key={i} className={`rating ${ratingValue > i ? "orange" : "grey"}`} onClick={() => handleRating(i + 1)}>
                                     <AiFillStar />
                                 </i>
                             ))

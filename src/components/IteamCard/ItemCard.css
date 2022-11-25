@@ -19,7 +19,7 @@
   padding-top: 10px;
   font-size: 30px;
 
-  position: relative; /* float: right; */
+  position: absolute; /* float: right; */
   transition: var(--transition);
 }
 .itemCard .isFavourite:hover {
@@ -32,8 +32,8 @@
 }
 
 .itemCard .imgBox {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -50,6 +50,9 @@
   object-fit: cover;
   transition: var(--transition);
   position: absolute;
+}
+.itemCard .imgBox img:hover {
+  transform: scale(1);
 }
 
 .itemContent {
@@ -73,6 +76,13 @@
 }
 .bottom .ratings {
   color: var(--colorBGVariant);
+}
+
+.orange {
+  color: rgb(255, 153, 0);
+}
+.grey {
+  color: rgb(112, 94, 57);
 }
 .addToCart {
   cursor: pointer;

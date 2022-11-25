@@ -5,13 +5,16 @@ import "./rowContainer.css"
 import { MenuItems, Items } from "../../components/Data"
 
 
-const RowContainer = () => {
+const RowContainer = (props) => {
+
+
 
 
     useEffect(() => {
         function setMenuCardActive() {
             menuCards.forEach((n) => n.classList.remove("active"))
             this.classList.add("active");
+
 
         }
         const menuCards = document.querySelector(".rowContainer").querySelectorAll(".rowMenuCard")
@@ -21,11 +24,11 @@ const RowContainer = () => {
     return (
         <div className='rowContainer'>
             {
-                MenuItems && Items.map((data) => {
+                MenuItems.map((data) => {
                     return (
                         <div key={data.id}>
 
-                            <MenuCard img={data.imgSrc} name={data.name} isActive={data.id === 1 ? true : false} />
+                            <MenuCard itemId={data.itemId} img={data.imgSrc} name={data.name} isActive={data.id === 1 ? true : false} getProductType={props.getProductType} />
                         </div>
                     )
                 })
