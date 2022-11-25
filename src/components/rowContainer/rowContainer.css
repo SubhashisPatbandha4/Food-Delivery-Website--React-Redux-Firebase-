@@ -1,14 +1,14 @@
 .rowContainer {
-  gap: 30px;
+  gap: 20px;
   display: flex;
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin: 3rem 0;
-  padding: 0 1rem;
+  margin: 1rem 0;
+  
   width: 100vw;
   height: 15rem;
-  /* padding: 2rem 0; */
+  /* padding: 2rem 2rem; */
 }
 .rowContainer::-webkit-scrollbar {
   display: none;

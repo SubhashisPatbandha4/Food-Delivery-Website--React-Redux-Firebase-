@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import MenuCard from './MenuCard'
 import "./rowContainer.css"
-import dish1 from "../../Assets/logo.png"
+
 import { MenuItems, Items } from "../../components/Data"
 
 
@@ -30,7 +30,7 @@ const RowContainer = () => {
                     )
                 })
             }
-            ``
+
 
 
         </div>

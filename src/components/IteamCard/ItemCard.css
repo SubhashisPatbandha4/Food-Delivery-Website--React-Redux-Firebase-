@@ -1,0 +1,89 @@
+.itemCard {
+  background: var(--colorWhite);
+  width: 160px;
+  height: 180px;
+  position: relative;
+  justify-content: flex-end;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.itemCard .isFavourite {
+  color: rgb(251, 185, 185);
+  /* background: var(--colorWhite); */
+  text-align: right;
+  padding-top: 10px;
+  font-size: 30px;
+
+  position: relative; /* float: right; */
+  transition: var(--transition);
+}
+.itemCard .isFavourite:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.itemCard .isFavourite.active {
+  color: red;
+  filter: drop-shadow(0 0 6px red);
+}
+
+.itemCard .imgBox {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 100vw;
+  justify-content: center;
+  /* background: yellow; */
+
+  /* padding: 10px; */
+  margin: 0px 11px;
+}
+.itemCard .imgBox img {
+  margin-top: -50px;
+  transform: scale(0.5);
+  object-fit: cover;
+  transition: var(--transition);
+  position: absolute;
+}
+
+.itemContent {
+  width: 100%;
+
+  /* background: var(--colorWhite); */
+}
+.itemContent .itemName {
+  font-weight: normal;
+  font-size: small;
+  text-align: center;
+  word-break: break-all;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.bottom .ratings {
+  color: var(--colorBGVariant);
+}
+.addToCart {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--colorBGVariant);
+  color: var(--colorWhite);
+  text-align: center;
+}
+.addToCart:active {
+  background: var(--colorWhite);
+  color: var(--colorBGVariant);
+}
