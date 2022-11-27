@@ -3,6 +3,7 @@ import Banner from '../banner/Banner'
 import BannerPic from "../../Assets/banner.jpg"
 import "./mainContainer.css"
 import DishContainer from "../../components/dishContainer/DishContainer"
+import RightMenu from "../../components/rightMenu/RightMenu"
 
 const MainContainer = ({ name, discount, link }) => {
     return (
@@ -19,7 +20,9 @@ const MainContainer = ({ name, discount, link }) => {
             </div>
             <div className="rightMenu">
 
+                <RightMenu />
             </div>
+
         </div>
     )
 }

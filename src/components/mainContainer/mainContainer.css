@@ -4,10 +4,10 @@
   height: fit-content;
   margin-top: 6rem;
 }
-.mainContainer span{
- font-size: 1.2rem;
- color: var(--colorBG);
- font-weight: 600;
+.mainContainer span {
+  font-size: 1.2rem;
+  color: var(--colorBG);
+  font-weight: 600;
 }
 .mainContainer > div .link {
   background: var(--colorWhite);
