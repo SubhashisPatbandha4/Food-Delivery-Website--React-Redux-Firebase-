@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./App.css"
 import Header from './components/header/Header'
 import MenuContainer from './components/menuContainer/MenuContainer'
@@ -11,7 +11,12 @@ import { FiSettings } from "react-icons/fi"
 import MainContainer from "./components/mainContainer/MainContainer"
 
 const App = () => {
+  const [rightMenuActive, setRightMenuActive] = useState(false)
+  const getRightMenu = (value) => {
+    setRightMenuActive(value)
+  }
   useEffect(() => {
+
     function setmenuActive() {
       menuLi.forEach((n) => n.classList.remove("active"))
       this.classList.add("active")
@@ -28,12 +33,12 @@ const App = () => {
       
       Header Section
   */}
-      <Header />
+      <Header getRightMenu={getRightMenu} rightMenuActive={rightMenuActive} />
       {/*
       
      main container 
   */}
-      <MainContainer />
+      <MainContainer rightMenuActive={rightMenuActive} />
 
 
 

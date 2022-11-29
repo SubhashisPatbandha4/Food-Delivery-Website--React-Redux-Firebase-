@@ -5,7 +5,11 @@ import { FiShoppingCart } from "react-icons/fi"
 import { GiHamburgerMenu } from "react-icons/gi"
 import logo from "../../Assets/logo.png"
 import profilePic from "../../Assets/profilePic.jpg"
-const Header = () => {
+const Header = ({ getRightMenu, rightMenuActive }) => {
+
+    const toggleRightMenu = () => {
+        getRightMenu(!rightMenuActive)
+    }
     return (
         <header className='container header_container '>
             <div className="headerItem">
@@ -35,7 +39,7 @@ const Header = () => {
                     </div> */}
                 </div>
                 <div className='toggleMenu'>
-                    <GiHamburgerMenu className="toggleIcon" />
+                    <GiHamburgerMenu className="toggleIcon" onClick={() => toggleRightMenu()} />
                 </div>
             </div>
         </header>

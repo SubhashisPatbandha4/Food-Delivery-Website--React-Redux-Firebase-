@@ -1,19 +1,25 @@
 .rightMenuContainer {
-  width: 90vw;
-  background: var(--colorBGVariant);
-  height: 80vh;
+  width: fit-content;
+  height: 90vh;
+  background: var(--colorBG);
   position: fixed;
   right: 0;
-  top: 80px;
+  top: 12vh;
   z-index: 101;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 10px;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 3px 3px 5px var(--colorBGVariant);
+  padding: 20px;
+  /* transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  /* box-shadow: 30px 30px 5px 10px black; */
+  border: 1px solid var(--colorBGVariant);
 
   background-image: url(../../Assets/dark-wood.png);
+  transform: translateX(200%);
+  transition:var(--transition)
+}
+.rightMenuContainer.active{
+  transform: translateX(0%);
 }
 .debitCardContainer {
   width: 100%;
@@ -21,16 +27,14 @@
   /* border: 15px solid whitesmoke; */
 }
 .debitCard {
-  position: relative;
-  /* border: 15px solid blue; */
-  /* background: white; */
-  width: 35vw;
-  height: 40vh;
+  width: 20rem;
+  height: 12rem;
   min-width: 300px;
-  min-height: 170;
+  min-height: 170px;
+  position: relative;
   border-radius: 15px;
   float: right;
-  right: 2rem;
+  /* right: 2rem; */
   /* overflow: hidden; */
 }
 .debitCard::before {
@@ -81,24 +85,26 @@
   position: absolute;
 }
 .cardLogo {
-  width: 150px;
-  top: 70px;
-  right: 30px;
+  width: 100px;
+  top: 40px;
+  right: 50px;
   height: auto;
 }
 .cardChip {
-  width: 100px;
+  width: 60px;
   top: 50px;
   left: 30px;
   height: auto;
-  color: white;
+  color: var(--colorWhite);
 }
 .cardNumber,
 .cardFrom,
 .cardTo,
 .cardName {
-  color: white;
-  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  /* color: white; */
+  /* letter-spacing: 2px; */
 }
 .cardNumber {
   bottom: 60px;
@@ -137,4 +143,49 @@
   top: 200px;
   right: -100px;
   box-sizing: border-box;
+}
+.cartCheckOutContainer {
+  width: 100%;
+}
+.cartContainer {
+  width: 100%;
+  height: 30vh;
+  margin-top: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  /* background: white; */
+}
+.cartContainer::-webkit-scrollbar {
+  display: none;
+}
+.cartBottom {
+  /* background: red; */
+}
+.totalSection {
+  height: 2vh;
+
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+  display: flex;
+}
+.checkOut {
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+  color: var(--colorWhite);
+  cursor: pointer;
+  background: var(--colorBGVariant);
+  transition: var(--transition);
+  letter-spacing: 2px;
+  font-weight: bolder;
+}
+.checkOut:hover {
+  background: var(--colorWhite);
+  color: var(--colorBGVariant);
+}
+.checkOut:active{
+  transform:scale(1.1)
 }

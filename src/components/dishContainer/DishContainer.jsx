@@ -3,7 +3,7 @@ import SubMenuContainer from '../subMenuContainer/subMenuContainer'
 import RowContainer from '../rowContainer/RowContainer'
 import "./dishContainer.css"
 import ItemCard from '../IteamCard/ItemCard'
-import { MenuItems, Items } from "../../components/Data"
+import {Items } from "../../components/Data"
 const DishContainer = ({ name }) => {
     const [productType, setProductType] = useState(Items.filter(element => element.itemId === "burger01"))
 

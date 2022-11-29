@@ -43,7 +43,7 @@
   color: var(--colorBlack);
   width: 100%;
   font-size: 1rem;
-  background-color:var(--colorWhite);
+  background-color: var(--colorWhite);
 }
 .searchIcon {
   transition: var(--transition);
@@ -110,6 +110,14 @@
   text-align: center;
   font-size: 1.5rem;
 }
+.toggleIcon {
+  transition: var(--transition);
+}
+.toggleIcon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
 /* ========================================media queries for ( MEDIUM DEVICES ) ================================ */
 @media screen and (max-width: 1024px) {
   header {

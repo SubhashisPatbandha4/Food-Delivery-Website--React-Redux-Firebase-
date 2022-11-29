@@ -5,7 +5,7 @@ import "./mainContainer.css"
 import DishContainer from "../../components/dishContainer/DishContainer"
 import RightMenu from "../../components/rightMenu/RightMenu"
 
-const MainContainer = ({ name, discount, link }) => {
+const MainContainer = ({ name, discount, link ,rightMenuActive}) => {
     return (
         <div >
             <div className="mainContainer">
@@ -20,7 +20,7 @@ const MainContainer = ({ name, discount, link }) => {
             </div>
             <div className="rightMenu">
 
-                <RightMenu />
+                <RightMenu rightMenuActive={rightMenuActive}/>
             </div>
 
         </div>

@@ -1,0 +1,84 @@
+.cartItems {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: 8px 0;
+  padding: 4px;
+  background: var(--colorBG);
+  border-radius: 20px;
+  width: 100%;
+  height:rem;
+}
+
+.imgBox {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  min-height: 60px;
+  /* background: rgb(17, 161, 205); */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.itemSection {
+  margin-left: 2rem;
+  background: var(--colorBG);
+  padding: 5px;
+  width: 100%;
+  border-radius: 20px;
+}
+.itemName {
+  font-size: 1rem;
+  color: rgba(0, 0, 0);
+}
+.itemQuantity {
+  font-size: 1rem;
+  color: rgba(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* background: red; */
+}
+.itemQuantity span {
+  color: var(--colorBG);
+}
+.itemQuantity span .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+}
+
+.itemAdd,
+.itemRemove {
+  color: black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+.itemAdd:hover,
+.itemRemove:hover {
+  color: var(--colorWhite);
+  transform: scale(1.1);
+}
+.itemPrice {
+  font-size: 1rem;
+  font-weight: 600;
+
+  /* background: red; */
+}
+.dolorSign {
+  font-size: 0.6rem;
+  color: var(--colorWhite);
+}
+.itemPriceValue {
+  font-size: 1rem;
+}
