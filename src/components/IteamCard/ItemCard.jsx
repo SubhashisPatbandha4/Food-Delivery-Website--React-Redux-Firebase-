@@ -1,12 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { MdFavorite } from "react-icons/md"
 import { AiFillStar } from "react-icons/ai"
 import { GrFormAdd } from "react-icons/gr"
+import { Items } from "../Data"
 import "./ItemCard.css"
 
+import { useDispatch, useSelector } from 'react-redux'
+import { updateCart } from "../../actions"
 
 
-const ItemCard = ({ imgSrc, name, rating, price,itemId }) => {
+
+const ItemCard = ({ imgSrc, name, rating, price, itemId }) => {
+    const { cart } = useSelector(state => state.updateCart)
+
+    const dispatch = useDispatch()
+
+
+    const [userCart, setUserCart] = useState(null)
+    useEffect(() => {
+        if (userCart) {
+
+            cart.push(userCart)
+            dispatch(updateCart(cart))
+        }
+    }, [userCart]);
 
     const [ratingValue, setRatingValue] = useState(Math.floor(rating))
     const handleRating = (value) => {
@@ -42,7 +59,7 @@ const ItemCard = ({ imgSrc, name, rating, price,itemId }) => {
                         <span>${price}</span>
                     </h3>
                     <i className="addToCart">
-                        <GrFormAdd />
+                        <GrFormAdd onClick={() => setUserCart(Items.find((i) => i.id === itemId))} />
                     </i>
                 </div>
             </div>

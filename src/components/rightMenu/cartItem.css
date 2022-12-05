@@ -47,7 +47,7 @@
   /* background: red; */
 }
 .itemQuantity span {
-  color: var(--colorBG);
+  color: var(--colorWhite);
 }
 .itemQuantity span .quantity {
   display: flex;

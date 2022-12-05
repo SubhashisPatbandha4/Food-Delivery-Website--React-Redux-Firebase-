@@ -26,7 +26,7 @@ const App = () => {
     menuLi.forEach(n => {
       n.addEventListener("click", setmenuActive)
     })
-    console.log(menuLi)
+  
   }, []);
   return (
     <div className='App'>{/*
