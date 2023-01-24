@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 link of live site
-foodwebsitesubhashis.netlify.app
+https://foodwebsitesubhashis.netlify.app/
 
 In the project directory, you can run:
 
