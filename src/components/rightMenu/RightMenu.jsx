@@ -17,7 +17,7 @@ const RightMenu = ({ rightMenuActive }) => {
 
             </div>
             {
-                !cart ? (<div></div>) : (
+                cart.length===0 ? (<div></div>) : (
 
                     <div className="cartCheckOutContainer">
 

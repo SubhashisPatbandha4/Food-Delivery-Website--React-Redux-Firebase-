@@ -5,7 +5,9 @@ import { FiShoppingCart } from "react-icons/fi"
 import { GiHamburgerMenu } from "react-icons/gi"
 import logo from "../../Assets/logo.png"
 import profilePic from "../../Assets/profilePic.jpg"
+import { useSelector } from 'react-redux'
 const Header = ({ getRightMenu, rightMenuActive }) => {
+    const { cart } = useSelector(state => state.updateCart)
 
     const toggleRightMenu = () => {
         getRightMenu(!rightMenuActive)
@@ -25,7 +27,7 @@ const Header = ({ getRightMenu, rightMenuActive }) => {
                 < div className="shoppingCart">
                     <FiShoppingCart className="cart" />
                     <div className='cartContent'>
-                        <p>2</p>
+                        <p>{cart.length}</p>
                     </div>
                 </div>
                 < div className="profileContainer">
